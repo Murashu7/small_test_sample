@@ -12,7 +12,7 @@ class ItemCheckerImpl implements ItemChecker {
 // シングルトン
 class DB {
   static DB? _db;
-  static final _stock = Map<String, int>();
+  static final stock = Map<String, int>();
 
   factory DB() {
     _db ??= DB._();
@@ -20,7 +20,7 @@ class DB {
   }
 
   static int findOr(String item, int dflt) {
-    return _stock.containsKey(item) ? _stock[item]! : dflt;
+    return stock.containsKey(item) ? stock[item]! : dflt;
   }
 
   DB._();
