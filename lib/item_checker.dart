@@ -1,3 +1,5 @@
+import 'dart:io';
+
 abstract class ItemChecker {
   bool check(String item);
 }
@@ -20,6 +22,7 @@ class DB {
   }
 
   static int findOr(String item, int dflt) {
+    sleep(Duration(milliseconds: 1000));
     return stock.containsKey(item) ? stock[item]! : dflt;
   }
 
