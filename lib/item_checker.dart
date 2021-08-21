@@ -12,7 +12,7 @@ class ItemCheckerImpl implements ItemChecker {
 // シングルトン
 class DB {
   static DB? _db;
-  static final stock = Map<String, int>();
+  static var stock = Map<String, int>();
 
   factory DB() {
     _db ??= DB._();
