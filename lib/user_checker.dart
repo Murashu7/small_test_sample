@@ -1,3 +1,6 @@
+import 'package:small_test_sample/address_checker.dart';
+import 'package:small_test_sample/age_checker.dart';
+
 abstract class UserChecker {
   bool check(int age, String address);
 }

@@ -1,3 +1,6 @@
+import 'package:small_test_sample/user_checker.dart';
+import 'package:small_test_sample/item_checker.dart';
+
 class Api {
   final ItemChecker itemChecker;
   final UserChecker userChecker;
