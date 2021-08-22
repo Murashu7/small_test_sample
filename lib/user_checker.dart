@@ -15,3 +15,14 @@ class UserCheckerImpl implements UserChecker {
     return ageChecker.check(age) && addressChecker.check(address);
   }
 }
+
+// 無名クラス（のようなもの）
+class AnonymousUserChecker implements UserChecker {
+  AnonymousUserChecker({required bool check(int age, String address)})
+      : _check = check;
+
+  final bool Function(int, String) _check;
+
+  @override
+  bool check(int age, String address) => _check(age, address);
+}

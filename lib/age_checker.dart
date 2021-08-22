@@ -8,3 +8,13 @@ class AgeCheckerImpl implements AgeChecker {
     return 20 <= age;
   }
 }
+
+// 無名クラス（のようなもの）
+class AnonymousAgeChecker implements AgeChecker {
+  AnonymousAgeChecker({required bool check(int age)}) : _check = check;
+
+  final bool Function(int) _check;
+
+  @override
+  bool check(int age) => _check(age);
+}

@@ -11,6 +11,16 @@ class ItemCheckerImpl implements ItemChecker {
   }
 }
 
+// 無名クラス（のようなもの）
+class AnonymousItemChecker implements ItemChecker {
+  AnonymousItemChecker({required bool check(String item)}) : _check = check;
+
+  final bool Function(String) _check;
+
+  @override
+  bool check(String item) => _check(item);
+}
+
 // シングルトン
 class DB {
   static DB? _db;

@@ -8,3 +8,14 @@ class AddressCheckerImpl implements AddressChecker {
     return address == "tokyo";
   }
 }
+
+// 無名クラス（のようなもの）
+class AnonymousAddressChecker implements AddressChecker {
+  AnonymousAddressChecker({required bool check(String address)})
+      : _check = check;
+
+  final bool Function(String) _check;
+
+  @override
+  bool check(String address) => _check(address);
+}
