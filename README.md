@@ -1,16 +1,22 @@
 # small_test_sample
 
-A new Flutter project.
+「小さなユニットテストのすすめ」に乗っていたテストコードをFlutterで実装しました。
 
-## Getting Started
+参照
 
-This project is a starting point for a Flutter application.
+「小さなユニットテストのすすめ」
 
-A few resources to get you started if this is your first Flutter project:
+https://zenn.dev/suzuki_hoge/books/2020-12-small-unit-test-65625504e7be1532413f
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## 内容
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+実際のコード例はscalaで実装されていましたが、その内容をFlutterで実装しました。
+
+内容が非常にすばらしく、自分で実装してみて非常に勉強になりました。
+
+ポイント
+
+- 各ユニットテストは自身が接するモジュールとの入出力のみテストする。
+- 特別なライブラリを使わず、自作のモックを利用する。
+- サンプルコードではモックを作成するために無名クラスを利用していたが、Dartには無名クラスの実装がない。よって無名クラスもどきを作成。
+
